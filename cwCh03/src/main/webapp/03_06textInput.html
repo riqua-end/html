@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>문자 입력창</title>
+</head>
+<body>
+
+<h3>자기소개서 작성</h3>
+<hr/>
+<form name="fn" id="fid" action="#" method="post"><!-- 비번은 노출 안되어야 하므로 post,데이터량이 대량 -->
+	아이디 : <input type="text" name="uid" value="" maxlength="8"/><br/><!-- type="text"는 문자 입력창 -->
+	패스워드 : <input type="password" name="upw" maxlength="8" /><br/><br/><!-- 비번 입력창,maxlength는 최대 입력 문자수 -->
+	자소서 : <!-- textarea는 인라인 -->
+	<!-- 여러줄로 된 문자입력창 -->
+	<textarea rows="5" cols="20" name="uprofile">
+	이곳에 자기 소개서를 작성
+	</textarea><br/><br/>
+	<input type="submit" value="보내기"/>&nbsp;&nbsp;<input type="reset" value="취소">
+	<!-- submit는 클릭버튼으로 입력된 데이터를 서버로 보내는 버튼 -->
+	<!-- reset는 입력 내용을 취소(초기화) -->
+</form>
+</body>
+</html>

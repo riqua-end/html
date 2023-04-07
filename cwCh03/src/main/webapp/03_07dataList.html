@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>datalist</title>
+</head>
+<body>
+
+<h3>가보고 싶은 곳</h3>
+<hr/>
+
+<form name="fn" id="fid" action="#" method="post">
+	<!-- input의 list속성값과 datalist의 id를 매핑 -->
+	나라 : <input type="text" name="country" list="countries"/>
+	<!-- datalist set는 인라인태그 -->
+	<datalist id="countries">
+		<option value="가나"></option> <!-- value는 보여주는 값이며 선택시에 취하는 값 -->
+		<option value="스위스"></option>
+		<option value="브라질"></option>
+	</datalist>
+	<p></p>
+	보고싶은 것 : <input type="text" name="wantsee" list="what"/>
+	<datalist id="what">
+		<option value="산"></option> <!-- value는 보여주는 값이며 선택시에 취하는 값 -->
+		<option value="바다"></option>
+		<option value="강"></option>
+	</datalist>
+</form>
+
+</body>
+</html>

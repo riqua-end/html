@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>semantic web</title>
+<!-- 인터널 방식의 css -->
+<style>
+html,body {/* html과 body는 선택자로 html태그와 body태그 엘리먼트 선택 */
+	/*속성 표시로 속성 이름:값;*/
+	height : 100%; /*브라우져 높이 모두 차지*/
+	margin : 0px; /*외부 여백*/
+	padding : 0px; /*내부 여백 */
+	border : 1px solid red; /*테두리선 두께 모양 색 */
+}
+header {
+	height : 15%;
+	background : yellow;
+}
+nav {
+	height : 70%;
+	width : 15%;
+	float : left; /*블록레벨엘리먼트를 좌측부터 일렬 배치,블록레벨을 인라인 레벨로 변환 */
+	background-color : orange;
+}
+section {
+	width : 70%;
+	height : 70%;
+	float : left; /*블록레벨엘리먼트를 좌측부터 일렬배치 */
+	background-color : olivedrab;
+}
+aside {
+	width : 15%;
+	height : 70%;
+	float : left; /*블록레벨엘리먼트를 좌측부터 일렬 배치 */
+	background-color : orange;
+}
+footer {
+	height : 15%;
+	clear : both; /*float속성을 이제부터 적용안하고 원래 위치에 배치 */
+	background-color : plum;
+}
+</style>
+</head>
+<body>
+
+<!-- 모두 블록태그로 좌우 100%차지 -->
+<!-- 태그는 semantic태그를 사용했으나 구조화는 안됨 -->
+<!-- 구조화와 모양은 css인터널 방식으로 만듦 -->
+<!-- 태그명 style="border ;width는 css중 인라인 방식 -->
+<header>header(제목)</header>
+<nav>nav(메뉴)</nav>
+<section>section(본문)</section>
+<aside>aside(부가내용)</aside>
+<footer>footer(밑부분,저자 동의 내용)</footer>
+</body>
+</html>

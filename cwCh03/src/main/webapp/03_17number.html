@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>spin과 슬라이드바</title>
+</head>
+<body>
+
+
+<h3>홈 제어 시스템 - 온도 조절(number와 range속성 사용)</h3>
+<hr/>
+
+<form name="fn" id="fi" action="#" method="post">
+	지속시간(0.0 ~ 10.0시간)
+	<input type="number" name="timer" min="0.0" max="10.0" step="0.5"/>
+	<p></p>
+	<!-- &deg;는 도 기호표시 엔터티 -->
+	<!-- 슬라이드바 사용하는 type="range" -->
+	온도 설정 : 10&deg;
+	<input type="range" name="tcontrol" min="10" max="30" list="temper"/>30&deg;
+	<datalist id="temper">
+		<option value="12" label="Low"></option><!-- label은 표시하는 마크 -->
+		<option value="20" label="Medium"></option>
+		<option value="28" label="high"></option>	
+	</datalist>
+	
+	<!-- 
+	datalist는 type="text"시는 드롭다운메뉴로 보이나 type="range"는 슬라이드바에
+	label속성으로 위치를 마커해주는 형태로 나ㅌㅏ남(수평으로 표시) -->
+</form>
+</body>
+</html>
