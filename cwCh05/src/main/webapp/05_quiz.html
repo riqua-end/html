@@ -5,18 +5,21 @@
 <title>quiz</title>
 
 <style>
+/* quiz 1번 */
 #menubar {
 	background-color : black;
 }
 #menubar ul,li {
 	display : inline-block;
 	padding : 15px 15px;
+	width : 10%;
 	
 }
 #menubar ul {
 	margin : 10px; 
 	padding : 0px;
-	width : 500px; 
+	width : 100%;
+	text-align : center; 
 }
 #menubar ul li a {
 	color : white;
@@ -26,6 +29,7 @@
 	color : red;
 }
 
+/* quiz 2번 */
 table {
 	border : 1px solid black;
 	border-collapse : collapse;
@@ -43,6 +47,74 @@ tbody tr:nth-child(even){
 tbody tr:nth-child(odd){
 	background : pink;
 }
+thead,tfoot {
+	background : gray;
+	color : black;
+}
+tbody tr:hover {
+	background : skyblue;
+}
+thead:hover {
+	background : purple;
+}
+tfoot:hover {
+	background : purple;
+}
+
+
+/* quiz3 */
+#fid {
+	position : absolute;
+	left : 50%;
+	transform : translate(-50%);
+	width : 460px;	
+}
+
+
+input[type=text]{
+	color : blue;
+}
+input:hover,textarea:hover {
+	background-color : pink;
+}
+input[type=text]:focus,input[type=email]:focus,
+input[type=tel]:focus,input[type=password]:focus {
+	font-size : 120%;
+}
+input {
+	display : block;
+	width : 100%;
+	height : 30px;
+	margin-top : 4px;
+	margin-bottom : 10px;
+	font-size : 15px;
+	border-radius : 5px;
+	border : 1px solid gray;
+	cursor : pointer;
+}
+fieldset {
+	border : 0;
+}
+legend {
+	font-size : 40px;
+	text-align : center;
+	color : #2768D8;
+}
+#submit {
+	background : #2768D8;
+	border : 1px solid black;
+	width : 100%;
+	color : #fff;
+}
+#reset {
+	background : #fe6952;
+	border : 1px solid black;
+	width : 100%;
+	color : #fff;
+}
+span {
+	font-weight : bold;
+}
 
 </style>
 </head>
@@ -57,7 +129,7 @@ tbody tr:nth-child(odd){
 		<li><a href="#">Login</a></li>
 		<li><a href="#">Join</a></li>
 		<li><a href="#">Board</a></li>
-		<li><a href="#">F.Q.A</a></li>
+		<li><a href="#">F.A.Q</a></li>
 	</ul>
 </nav>
 
@@ -69,15 +141,56 @@ tbody tr:nth-child(odd){
 		<tr><th>번호</th><th>이름</th><th>학과</th><th>학번</th><th>전화번호</th></tr>	
 	</thead>
 	<tbody>
-		<tr><td>777번</td><td>김광진</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
-		<tr><td>777번</td><td>김광진</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
-		<tr><td>777번</td><td>김광진</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
-		<tr><td>777번</td><td>김광진</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
+		<tr><td>1번</td><td>김자바</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
+		<tr><td>2번</td><td>나자바</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
+		<tr><td>3번</td><td>박자바</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
+		<tr><td>4번</td><td>이자바</td><td>자바과</td><td>23학번</td><td>01012341234</td></tr>
 	</tbody>
 	<tfoot>
 		<tr><th>안</th><th>녕</th><th>하</th><th>세</th><th>요</th></tr>
 	</tfoot>
 </table>
+
+<h3>Q3</h3>
+<hr>
+
+<form name="f1" id="fid" action="#" method="post">
+	<fieldset>
+	<legend><strong>회원 가입</strong></legend>
+	<label>
+		<span>ID</span>
+		<input type="text" name="id" placeholder="아이디 입력" maxlength="10" required><br>
+	</label>
+	<label>
+		<span>E-MAIL</span>
+		<input type="email" name="email" placeholder="이메일 주소 입력" required><br>
+	</label>
+	<label>
+		<span>이름</span>
+		<input type="text" name="name" placeholder="이름 입력" maxlength="10" required><br>
+	</label>
+	<label>
+		<span>비밀번호</span>
+		<input type="password" name="pass" placeholder="비밀번호 입력" required><br>
+	</label>
+	<label>
+		<span>전화번호</span>
+		<input type="tel" name="tel" placeholder="핸드폰 번호 입력" maxlength="13" required><br>
+	</label>
+	<label>
+		<span>주소</span>
+		<input type="text" name="adress" placeholder="주소 입력" required><br>
+	</label>
+	<label>
+		<span>자기소개</span><br>
+		<textarea placeholder="메세지 입력"></textarea><br>
+	</label>
+	<label>
+		<input type="submit" id="submit" value="회원가입">
+		<input type="reset" id="reset"value="초기화">
+	</label>
+	</fieldset>
+</form>
 </body>
 </html>
 
