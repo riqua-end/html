@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>css 합침과 오버라이딩</title>
+
+<link href="style/external.css" rel="stylesheet" type="text/css"/><!-- 외부css 연결 -->
+<style>
+/*외부 css보다 우선 순위 높도록 link밑에 작성*/
+p {
+	color:blue;
+	font-size : 12px;
+	/* 브라우져 디폴트인 color:black,font-size:16px;는 무시 */
+	/* 외부 css의 background : mistyrose;로 포함 */
+}
+</style>
+</head>
+<body>
+
+<h3>p 태그에 스타일 중첩</h3>
+<hr/>
+<p>Hello,students!</p><!-- 외부css background,인터널의 color,font-size가 합해짐 -->
+<!-- o는 color:blue,font-size:12px background:mistyrose -->
+<p style="font-size : 25px">안녕하세요 교수님!</p>
+<!-- 인라인의 font-size가 겹침으로 인라인걸로 overriding -->
+<!-- color:blue,font-size:25px background:mistyrose -->
+</body>
+</html>

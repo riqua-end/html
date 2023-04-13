@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>a 태그의 download속성 사용</title>
+</head>
+<body>
+
+<h3>친구들아! 여기서 다운받아!</h3>
+<hr/>
+
+<!-- download은 속성인데 ="값" 없이 사용,모든 파일의 다운로드 가능 -->
+<!-- 동일 서버에 있는 자원만 가능함(보안문제) -->
+<!-- 다운로드는 서버 프로그램에서 처리 -->
+<ul>
+	<li><a href="media/Elvis.png" download>엘비스 이미지 다운로드</a></li>
+	<li><a href="media/chapter9.pdf" download>chapter9.pdf 다운로드 </a></li>
+	<li><a href="media/EmbraceableYou.mp3" download>mp3 다운로드</a></li>
+	<li><a href="ex2-09.html" download> 예제 2-9 HTML 파일 다운로드</a></li>
+	<li><a href="media/test.hwp" download>한글 파일 다운로드</a></li>
+	<li><a href="C:/KIMKWANGJIN/workspacewep/cwCh01/media/chapter9.pdf" download>일반 파일</a></li>
+	<!-- 서버가 아닌 자기 pc의 일반 파일은 보안상 안됨 -->
+	
+	<!-- 이미지를 보여주고 다운로드 -->
+	<li><a href="media/Elvis.png" download>
+		<img src="media/Elvis.png" width="150" height="150"/>
+		</a></li>
+</ul>
+
+</body>
+</html>

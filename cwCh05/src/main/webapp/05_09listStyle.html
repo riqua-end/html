@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>list style</title>
+
+<style>
+ul {
+	background-color : goldenrod;
+	padding : 10px 10px 10px 50px; /* 상 우 하 좌 */
+	list-style-position : inside;
+	/*마커의 위치 속성으로 값은 li안에 주는 inside와 밖에 주는 outside가 있으며 ul에 줌*/
+	/*디폴트값은 outside */
+	/*list-style-type : square; */ /*마커의 모양 */
+	/*disc(ul기본 검정원),circle(하얀원),square(검정사각형),decimal(숫자),lower-alpha(소문자)*/
+	/*upper-alpha(대문자),lower-roman(로마소문자),upper-roman(대문자로마)*/
+	list-style-image : url("media/marker.png"); /*마커를 이미지로 사용 */
+}
+ul li {
+	/*ul의 후손인 li*/
+	background-color : greenyellow;
+	margin-bottom : 5px; /*li의 이웃인 다른 li나 ul과의 아래측 여백 */
+}
+</style>
+</head>
+<body>
+
+<h3>커피 메뉴</h3>
+<hr>
+
+<!-- ul의 기본 마커는 disc인 검정원임 -->
+<ul>
+	<li>Espresso</li>
+	<li>Cappuccino</li>
+	<li>Cafe Latte</li>
+</ul>
+</body>
+</html>

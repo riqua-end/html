@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>셀렉터</title>
+
+<style>
+h3, li {
+	/*셀렉터를 ,로 구분하면 속성부 {}를 공통으로 적용 */
+	color: brown;
+}
+
+body.main {
+	/*태그이름이 body이고 class이름이 main인 엘리먼트를 선택*/
+	/*클래스 표시는 .으로 표시 */
+	background: aliceblue;
+}
+
+.warning {
+	color: red;
+}
+
+#list {
+	/*id속성값을 사용하는 선택자는 #아이디명으로 표시하며 id속성은 페이지 하나만 존재 */
+	/*<li>가 #list(ul)의 자식이므로 li우선 */
+	color: red;
+}
+
+ul strong {
+	/*공백은 후손을 나타내는 셀렉터(자식포함 후손) */
+	color : dodgerblue;
+}
+
+div > div > strong {
+	/*자식에만 한정*/
+	background : yellow;
+}
+
+ul + div {
+	/*ul태그의 형제중 뒤로 맨처음 나오는 태그 선택*/
+	font-size : 25px;
+}
+
+ul ~ div {
+	/*ul의 형제로 뒤에 나오는 모든 형제 div */
+	font-size : 25px;
+}
+h3:first-letter { /* 가상 클래스 셀렉터 */
+	color : red;
+} 
+li:hover { /* 가상 클래스 셀렉터 */
+	background : yellowgreen;
+}
+
+</style>
+</head>
+<body class="main">
+
+<h3>Web Programming</h3>
+<hr/>
+
+<div>
+	<div>
+		2학기<strong>학습 내용</strong>입니다.
+	</div>
+	<ul id="list"> <!-- id속성은 페이지내에 유일하게 하나 -->
+		<li>HTML5</li>
+		<li><strong>CSS</strong></li><!-- strong은 ul의 손자(후손) -->
+		<li>JAVASCRIPT</li>
+	</ul>
+	<div class="warning">
+		60점 이하는 F!
+	</div>
+	<div>추가 div</div>
+</div>
+
+<input type="text" name="name" placeholder="입력하세요"><br/>
+<a href="#" target="_blank">링크텍스트</a>
+</body>
+</html>

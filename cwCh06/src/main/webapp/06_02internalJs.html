@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>internal방식 JS</title>
+</head>
+<body>
+
+<h3>마우스 올려 보세요</h3>
+<hr>
+
+<img src="media/apple.png" alt="사과"
+	onmouseover="over(this)"
+	onmouseout="out(this)"/>
+<!-- over(this),out(this)는 자바스크립트의 함수를 호출,this는 현재 태그엘리먼트로 함수 파라메터인자 -->
+
+<script>
+//자바스크립트 함수 정의는 function 함수명(파라메터명)이고 {함수구현}
+//자바와 다르게 리턴타입이나 파라메터변수의 데이터형이 없음
+function over(obj){
+	obj.src = "media/banana.png"; //문장의 마지막에는 자바처럼 ;
+}
+function out(obj){
+	obj.src = "media/apple.png";
+}
+</script>
+</body>
+</html>

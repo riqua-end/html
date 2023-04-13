@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>relative position</title>
+
+<style>
+div {
+	display : inline-block; /*일렬배치이고 크기와 마진, 패딩 제어*/
+	height : 50px; /*inline-block이름으로 크기 가능*/
+	width : 50px; /*inline-block이름으로 크기 가능 */
+	border : 1px solid lightgray;
+	text-align : center; /*수평 중앙*/
+	color : white;
+	background-color : red;
+}
+#down:hover {
+	/*:hover는 유사클래스로 마우스를 해당 엘리먼트에 댈떄를 나타내는 셀렉터 */
+	position : relative; /*원래의 위치를 기준으로 위치 속성값에 따라 배치 */
+	left : 20px; /*static시를 기준으로 왼쪽 위치값 */
+	top : 20px; /*위로 부터의 위치값 */
+	background-color : green;
+}
+#up:hover {
+	position : relative;
+	right : 20px;
+	bottom : 20px;
+	background-color : green;
+}
+</style>
+</head>
+<body>
+
+<h3>상대 배치, relative</h3>
+<hr>
+	<div>T</div>
+	<div id="down">h</div>
+	<div>a</div>
+	<div>n</div>
+	<div id="up">k</div>
+	<div>s</div>
+</body>
+</html>

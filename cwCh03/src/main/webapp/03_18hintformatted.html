@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>placeholder,email,url</title>
+</head>
+<body>
+
+<h3>회원 정보를 입력해 주세요.</h3>
+<hr/>
+
+<!-- type="email"과 url은 submit시 형식을 체크해주나 tel과 search는 예비용으로 형식체크 안함 -->
+<!-- placeholder는 입력 힌트를 알려주는 속성이고 required는 필수 입력 -->
+<form action="#" method="post" name="fn" id="fid">
+	<label>
+		email : <input type="email" name="email" placeholder="id@host" required>
+	</label><br/>
+	<label>
+		Home : <input type="url" name="url" placeholder="http://">
+	</label><br/>
+	<label>
+		전화번호 : <input type="tel" name="tel" placeholder="010-xxx-xxxx">
+	</label><br/>
+	<label>
+		검색어 : <input type="search" name="search" placeholder="검색어">
+	</label><br/>
+	<input type="submit" value="확인"/>
+</form>
+</body>
+</html>

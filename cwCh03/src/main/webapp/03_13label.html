@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>checkbox,radio의 label</title>
+</head>
+<body>
+
+<h3>먹고 싶은 것 하나만 선택?(&lt;label&gt;이용)</h3>
+<hr/>
+
+<form name="fm" id="fid" action="#" metod="post">
+	<!-- checkbox와 radio도 label사용 가능 -->
+	<label>
+		<input type="radio" name="china" value="1">
+		짜장면<img src="media/jajang.png"> <!-- 캡션 -->
+	</label>
+	<label>
+		<input type="radio" name="china" value="2" checked>
+		짬뽕<img src="media/jjambbong.png">
+	</label>
+	<label>
+		<!-- 캡션은 input앞에 오거나 뒤에 올수 있음 -->
+		탕수육 <img src="media/tangsuyuk.png">
+		<input type="radio" name="china" value="3">
+	</label><br/>
+	
+	<input type="submit" value="확인"/>
+</form>
+<p></p>
+<form name="fm" id="fid" action="#" metod="post">
+	<!-- checkbox와 radio도 label사용 가능 -->
+	<label>
+		<input type="checkbox" name="china" value="1">
+		짜장면<img src="media/jajang.png"> <!-- 캡션 -->
+	</label>
+	<label>
+		<input type="checkbox" name="china" value="2" checked>
+		짬뽕<img src="media/jjambbong.png">
+	</label>
+	<label>
+		<!-- 캡션은 input앞에 오거나 뒤에 올수 있음 -->
+		탕수육 <img src="media/tangsuyuk.png">
+		<input type="checkbox" name="china" value="3">
+	</label><br/>
+	
+	<input type="submit" value="확인"/>
+</form>
+</body>
+</html>

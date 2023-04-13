@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>inline style</title>
+
+<style>
+/*이 페이지 전체에 적용 */
+p {
+color : red;
+font-size : 15px; /*글자 크기*/
+/*인라인의 속성과 겹치는 속성은 인라인이 우선이고 겹치지 않는 속성은 합해서 사용 */
+}
+</style>
+</head>
+<body>
+
+<h3>손 흥 민</h3>
+<hr/>
+<!-- 인라인 style이 없으면 head에 있는 인터널 스타일 적용 -->
+<p>오페라를 좋아하고</p>
+<p>엘비스 프레슬리를 좋아하고</p>
+<!-- 인라인 스타일이 우선수위가 제일 높아 겹치는 속성이 있으면 인라인 적용하고 서로 다른 속성은 합해짐 -->
+<p style="color:blue;">김치부침개를 좋아하고</p>
+<p style="color:magenta;font-size:30px;">축구를 좋아합니다</p>
+</body>
+</html>

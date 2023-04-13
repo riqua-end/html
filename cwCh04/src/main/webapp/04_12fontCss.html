@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>fontCss</title>
+<style>
+body {
+	font-family: "Times New Roman" , Serif; /*2개지정*/
+	/*글꼴 이름이 여러 단어 일시는 ""안에 넣어줌*/
+	font-size : large;/*브라우져별로 차이 있음 */
+}
+h3 {
+	/*단축형 style weight size family순으로 작성*/
+	font : italic bold 40px consolas, sans-serif;
+	/*body의 속성 상속 및 오버라이딩 */
+}
+</style>
+</head>
+<body>
+
+<h3>Consolas font</h3>
+<hr>
+<p style="font-weight:900">font-weight 900</p>
+<p style="font-weight:100">font-weight 100</p>
+<p style="font-style:italic">Italic Style</p><!-- 기울림 -->
+<p style="font-style:oblique">Oblique Style</p><!-- italic처럼 기울림,italic사용 권고 -->
+<p></p>
+현재 크기의 <span style="font-size:1.5em">1.5배</span>크기로
+<!-- span은 body에 속해 있고 body의 기본 글자크기는 16px(1em)이나 여기서는 large -->
+</body>
+</html>
