@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS의 함수</title>
+
+<script>
+//함수 선언
+function adder(a,b){
+	let sum = 0;
+	sum = a + b;
+	return sum;
+}
+</script>
+</head>
+<body>
+
+<!-- JS는 조각 코드로 필요한 곳에 만들면 됨 -->
+<h3>함수 adder()</h3>
+<hr>
+
+<div id="result">결과값을 표시하는 곳</div>
+
+<script>
+function divider(x, y) { // 함수 작성
+	let result = x / y;
+	return result;
+}
+</script>
+
+<script>
+//함수를 호출하여 그 결과값을 변수에 저장
+//함수는 자기 script블록 안에 있거나 위의 블록에 있는 것만 호출 가능
+let n = adder(24567, 98374); // 함수 호출
+document.write("24567 + 98374는 " + n + "<br>");
+	
+let res = divider(2500,50);
+document.getElement("result").innerHTML = res;
+	
+</script>
+
+</body>
+</html>

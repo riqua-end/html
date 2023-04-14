@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>삼항 연산자</title>
+</head>
+<body>
+
+<h3>조건 연산</h3>
+<hr>
+<script>
+let a=3, b=5;
+document.write("a=" + a + ", b=" + b + "<br><br>");
+document.write("두수의 차이 : " + ((a>b)?(a-b):(b-a))); //false이므로 (b-a)
+//조건 연산은 아래의 if~else를 간단히 처리
+if(a >b){
+	alert("a가 큰경우" + (a-b));
+}
+else {
+	alert("b가 큰경우" + (b-a));
+}
+</script>
+
+</body>
+</html>

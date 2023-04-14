@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS 변수</title>
+</head>
+<body>
+
+
+<h3>변수 선언, 전역/지역/블록 변수</h3>
+<hr>
+
+<script>
+	let x; //함수 밖이므로 전역 변수 x선언. let,const,var로 선언해도 동일
+	function f (){
+		let y; //y는 함수안에서 만드므로 로칼 변수, var로 선언해도 동일
+		x = 10; //전역변수
+		y = 20; //지역변수
+		z = 30; //함수안에서 만들시 var,let없이 만들면 전역 변수가 됨
+		if(y == 20){
+			let b = 40;
+			// if 블록에서만 사용되는 블록 변수 b선언,var로는 선언 불가,선언하면 함수내에서 사용하는
+			//로칼 변수가 됨
+			//그 블록 안에서만 사용하는 변수는 let,const로만 가능
+			//자바스크립트는 이전에는 함수안의 로칼변수와 전역 변수만 있지 블록에서의 변수는 없음
+			b++;
+			document.write("if 블록 내 블록 변수 b = " + b + "<br>");
+			document.write("함수 f() 내 지역변수 y  = " + y + "<br>");
+		}
+		//이곳에서는 블록변수 b에 접근할수없음
+		//이곳에서는 변수 x,y,z에 모두 접근 가능
+		document.write("함수 f() 내 지역변수 y = " + y + "<br>");
+		//document.write("if 블록 내 블록변수 b = " + b + "<br>");
+		//b는 if문안에서만 사용하는 블록 로칼 변수이름으로 접근 불가
+	}
+	f(); //함수 호출
+	
+	//전역 변수는 함수 밖에서 사용 가능
+	document.write("전역변수 x = " + x + "<br>");
+	document.write("전역변수 z = " + z);
+</script>
+
+<script>
+	//같은 html페이지의 script에서 전역변수는 다른 script에서도 사용
+	var x1 = 30;
+	document.write("위의 전역변수 x " + x + "<br>");
+	//단 script가 다르면 this로 못불러옴
+	function f1() {
+		var x1 = 25;
+		document.write("지역변수 x1 =" + x1);
+		document.write("<br>");
+		document.write("전역변수 x1 = " + this.x1); //let을 사용하면 this 사용 못함
+	}
+	f1(); // 한 페이지의 다른 script의 함수도 호출 가능
+	f();
+</script>
+</body>
+</html>
