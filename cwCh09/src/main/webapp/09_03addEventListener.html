@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addEventListener메서드</title>
+</head>
+<body onload="init()">
+
+<h3>addEventListener()를 이용한 리스너 등록</h3>
+<hr>
+<p id="p">마우스 올리면 orchid 색으로 변경</p>
+
+<script>
+let p;
+function init() { // 문서가 완전히 로드되었을 때 호출
+	p = document.getElementById("p");
+	p.addEventListener("mouseover", over); // 이벤트 리스너 등록
+	//p.addEventListener("처리할이벤트이름(on이 없음)",이벤트용 함수 이름);
+	p.addEventListener("mouseout", out); // 이벤트  리스너 등록
+	//이벤트용 함수명 대신 직접 익명의 함수 구현도 가능
+}
+function over() {
+	p.style.backgroundColor="orchid";
+}
+function out() {
+	p.style.backgroundColor="white";
+}
+</script>
+
+</body>
+</html>

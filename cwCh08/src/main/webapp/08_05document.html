@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>document</title>
+<script>
+//head는 body실행전 실행됨
+let text = "문서 로딩중일시 readyState = " + document.readyState + "\n";
+//readyState속성은 현재의 상태 표시
+</script>
+</head>
+<body style="background-color:yellow;color:blue;direction:rtl" onload="printProperties()">
+
+<!-- rtl속성은 오른쪽 정렬로 표시-->
+<!-- onload이벤트리스너 속성은 html의 로딩이 완료시 발생하는 이벤트 처리 -->
+<h3>document의 주요 프로퍼티</h3>
+<hr>
+<a href="http://www.naver.com">네이버 홈페이지</a>
+<div id="div1">이곳은 div 영역입니다.</div>
+<input id="input" type="text" value="여기 포커스가 있습니다">
+
+<script>
+// 문서가 완전히 로드(출력)되었을 때, 현재 document의 프로퍼티 출력 
+function printProperties() {  
+	document.getElementById("input").focus(); // <input> 태그에 포커스를 줌
+
+	text += "1. location =" + document.location + "\n";
+	//location속성은 현재 페이지 url 현재는 window.location(window생략하고 location)으로 사용
+	text += "2. URL =" + document.URL + "\n";
+	//현재 페이지 url
+	text += "3. title =" + document.title + "\n";
+	//현재 페이지의 title태그 내용
+	text += "4. head의 id =" + document.head.id + "\n";
+	//head엘리먼트의 DOM객체는 document객체의 속성으로 만들어져 있음
+	text += "5. body color =" + document.body.style.color + "\n";
+	//body엘리먼트의 DOM객체는 document객체의 속성으로 만들어져 있음
+	text += "6. domain =" + document.domain + "\n";;
+	//domain은 host이름 localhost
+	text += "7. lastModified =" + document.lastModified + "\n";
+	text += "8. defaultView = " + document.defaultView + "\n";
+	text += "9. 문서의 로드 완료 후 readyState = " + document.readyState + "\n";
+	//body에서 onload로 처리 했으므로 load가 complete
+	text += "10. referrer = " + document.referrer + "\n";
+	//reffer는 페이지 주소인데 localhost안잡힘
+	text += "11. activeElement = " + document.activeElement.value + "\n";
+	//activeElement는 현재 커서가 있는 엘리먼트 value는 입력된 값을 나타내는 value속성
+	text += "12. documentElement의 태그 이름 = " + document.documentElement.tagName + "\n";
+	//documentElement는 root엘리먼트인 HTML객체
+	document.getElementById("div1").innerHTML = text;
+	alert(text);
+}
+</script>
+
+
+</body>
+</html>

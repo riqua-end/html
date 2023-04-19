@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>09_09calculator</title>
+</head>
+<body>
+
+<h3> onclick, 계산기 만들기</h3>
+<hr>
+계산하고자 하는 수식을
+입력하고 계산 버튼을 눌러봐요.
+<p>
+<form>
+식 : <input type="text" id="exp" value=""><br>
+값 : <input type="text" id ="result"> 
+<input type="button" value=" 계산  "
+		onclick="calculate()">
+</form>
+
+<script>
+function calculate() {
+	var exp = document.getElementById("exp");
+	var result = document.getElementById("result");
+	result.value = eval(exp.value);
+	
+	//value는 DOM의 value속성으로 HTML의 value속성값을 가짐(입력값)
+	//eval(문자열수식)함수는 전역 함수로 문자열 수식을 수식으로 계산
+	//parseInt,isNaN등 전역 함수
+}
+</script>
+
+</body>
+</html>
