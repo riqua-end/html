@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>image load</title>
+</head>
+<body>
+<h3>onload로 이미지 크기 출력</h3>
+<hr>
+<form>
+<select id="sel" onchange="changeImage()">
+	<!-- onchange는 select의 값을 선택시에 발생 이벤트리스터,checkbox,radio도 동일 -->
+	<option value="media/apple.png">사과</option>
+	<option value="media/banana.png">바나나</option>
+	<option value="media/mango.png">망고</option>
+</select>
+<span id="mySpan">이미지 크기</span>
+</form>
+<p><img id="myImg" src="media/apple.png" alt="."></p>
+
+<script>
+function changeImage() {
+	let sel = document.getElementById("sel");
+	let img = document.getElementById("myImg");
+	
+	img.onload = function () {  // 이미지 크기 출력 ,이미지로딩 완료후에 크기를 알아냄 (로딩전에는 0)
+		 var mySpan = document.getElementById("mySpan");
+		mySpan.innerHTML = img.width + "x" + img.height;
+	}
+	let index= sel.selectedIndex; // 선택된 옵션 인덱스
+	img.src = sel.options[index].value; // <option>의 value 속성
+	//options속성은 select의 option을 배열형태로 처리하는 속성
+}
+</script>
+
+
+</body>
+</html>
