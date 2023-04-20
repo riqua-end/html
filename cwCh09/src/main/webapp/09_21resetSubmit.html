@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>resetSubmit</title>
+</head>
+<body>
+
+<form onsubmit="submitFunction()">
+	이름 : <input type="text" name="name">
+	<input type="submit" value="submit"/>
+</form>
+	
+<form onreset="resetFunction()">
+	이름 : <input type="text" name="name">
+	<input type="reset" value="reset"/>
+</form>	
+
+<script>
+function submitFunction(){
+	alert("submit");
+}
+function resetFunction(){
+	alert("reset");
+}
+</script>
+</body>
+</html>
