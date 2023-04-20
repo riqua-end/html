@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>winClose</title>
+</head>
+<body>
+
+<h3>window의 close()로 윈도우 닫기</h3>
+<hr>
+<a href="javascript:load('http://www.disneyworld.com')">
+         새 윈도우 열기(디즈니월드)</a><br>
+<a href="javascript:window.close()">
+         현재 윈도우 닫기(부모창)</a><br>
+<!-- window객체 제공 close() 사용-->
+<!-- 새로 만든 myWin만 닫도록 메서드를 만듦 -->         
+<a href="javascript:closeNewWindow()">
+         새 윈도우 닫기</a>
+
+<script>
+let newWin=null; //새로 연 윈도우
+function load(URL) {
+	newWin = window.open(URL,"myWin","left=300,top=300,width=400,height=300");
+	//이름이 있는 윈도우 객체 이므로 이 창 하나로 사용
+}
+function closeNewWindow(){
+	if(newWin==null || newWin.closed) {
+		//새창 newWin이 없거나 (null) 닫힌 상태시 (closed)
+		return; //윈도우가 없는 경우 그냥 리턴하여 함수 종료
+	}
+	else
+		newWin.close(); //window객체의 close()메서드로 닫기
+}
+</script>
+</body>
+</html>
