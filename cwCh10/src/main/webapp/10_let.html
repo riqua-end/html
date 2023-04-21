@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>let</title>
+</head>
+<body>
+
+<h3>let를 사용하여 변수 재정의</h3>
+<hr>
+
+<p id="demo">
+<p id="demo1">
+<p id="demo2">
+
+<script>
+let x = 10; //글로벌 변수
+//일반 블록
+{
+	let x  = 2; //x는 일반블록의 로칼변수
+}
+
+document.getElementById("demo").innerHTML = x; //블록 밖에서 사용되므로 글로벌 변수값
+
+let y = 2;
+//let y = 5; let 는 같은 범위의 변수시는 재정의 안됨
+//let은 함수블록,for블록,if,while,일반블록등 모든 블록에서 로칼변수 생성
+{
+	let y = 3; //일반 블록안의 로칼변수이므로 허용 됨	
+}
+
+{
+	let y = 4; //허용
+	document.getElementById("demo1").innerHTML = y;
+}
+
+//블록 밖이므로 글로벌 값 2
+document.getElementById("demo2").innerHTML = y;
+</script>
+</body>
+</html>

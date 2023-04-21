@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>var 변수 사용</title>
+</head>
+<body>
+
+<h3>var키워드로 변수 재정의</h3>
+<hr>
+
+<p id="demo">
+
+<script>
+var x = 10; //전역 변수
+//일반블록
+{
+	var x = 2; //블록안에서 x를 재정의 하면 var은 전역변수를 만듦
+	//var은 함수 블록 아닌 다른 블록에서는 로칼 변수를 못만듦
+}
+
+//x가 2로 재정의 되어 x는 2임
+document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>

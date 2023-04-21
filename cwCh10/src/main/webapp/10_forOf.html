@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>10_forOf</title>
+</head>
+<body>
+
+<h3>자바스크립트에서 for of사용</h3>
+<hr>
+
+<p id="demo">
+<p id="demo1">
+
+<script>
+const cars = ["BMW","Volvo","Mini"];
+let text = "";
+for(let x of cars) {
+	//배열 문자열 맵 노드리스트등은 for of가 사용 가능
+	text += x + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+/*
+ * 배열 문자열 맵 노드리스트등은 for of가 사용 가능하나 Object형에는 적용이 불가능
+ 객체형에는 for in을 사용
+ const person = {fname:"John",lname:"Doe",age:25};
+ let text1 = "";
+ for(let x of person){
+	 text1 += person[x] + "<br>";
+ }
+ document.getElementById("demo1").innerHTML = text;
+ */
+</script>
+</body>
+</html>

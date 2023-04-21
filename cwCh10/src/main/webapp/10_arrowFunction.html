@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>10_arrowFunction</title>
+</head>
+<body>
+
+<h3>화살표 함수 사용법</h3>
+<hr>
+
+<p id="demo">
+
+<script>
+/*
+ *  함수를 변수 hello로 정의
+let hello = function() {
+	return "Hello Worlds!!";
+}
+*/
+//함수를 화살표함수로 처리
+let hello = () => {
+	//화살표 함수 변수는 window객체에 속하므로 this는 window객체임
+	return "Hello worlds!!";
+};
+
+document.getElementById("demo").innerHTML = hello(); //호출은 함수 처럼 호출
+</script>
+
+</body>
+</html>

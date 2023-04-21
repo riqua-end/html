@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>10_class</title>
+</head>
+<body>
+
+<h3>자바스크립트 class사용</h3>
+<hr>
+
+<p id="demo">
+<p id="demo1">
+
+<script>
+//class정의
+class Car {
+	//생성자메서드 constructor(객체의 속성들)
+	constructor(name,year) {
+		this.name = name;
+		this.year = year;
+	}
+	
+	//class는 메서드도 정의
+	age() {
+		//function 키워드 없이 메서드 이름(파라메터)
+		let date = new Date();
+		alert(date);
+		return date.getFullYear() - this.year;
+	}
+}
+
+//class사용은 코어객체 생성자나 생성자함수 처럼 사용(생성자를 class 이름의 생성자를 사용)
+//생성자의 파라메터는 constructor의 파라메터 사용
+//객체 생성은 자바와 유사하고 객체 생성하면 자동으로 constructor메서드를 호출하여 초기화
+let myCar = new Car("Ford",2018); //constructor메서드를 호출하여 초기화
+document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year + " " + myCar.age();
+
+let yourCar = new Car("Benz",2022);
+document.getElementById("demo1").innerHTML = yourCar.name + " " + yourCar.year;
+</script>
+
+</body>
+</html>

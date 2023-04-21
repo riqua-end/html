@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>const</title>
+</head>
+<body>
+
+<h3>JavaScript const</h3>
+<hr>
+
+<p id="demo">
+
+<script>
+//const로 만든 변수는 재 할당 할수 없고 (값을 변경 불가) 선언시에 초기화해야함
+try {
+	const PI = 3.141592653589793; //바로 초기화하는 것을 권고
+	PI = 3.14; //const로 만든 변수는 값을 변경(재할당) 불가하여 예외발생하여 catch로 예외 던짐 
+}
+catch(err) {
+	//err은 window.error객체를 받는 파라메터
+	document.getElementById("demo").innerHTML = err;
+}
+</script>
+</body>
+</html>
