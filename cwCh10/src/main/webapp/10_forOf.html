@@ -26,7 +26,7 @@ document.getElementById("demo").innerHTML = text;
  객체형에는 for in을 사용
  const person = {fname:"John",lname:"Doe",age:25};
  let text1 = "";
- for(let x of person){
+ for(let x in person){
 	 text1 += person[x] + "<br>";
  }
  document.getElementById("demo1").innerHTML = text;
