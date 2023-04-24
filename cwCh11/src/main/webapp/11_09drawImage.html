@@ -10,14 +10,21 @@
 <hr>
 <canvas id="myCanvas" 
 		style="background-color:aliceblue"
+		width="300" height="250"></canvas><br>
+<canvas id="myCanvas1" 
+		style="background-color:aliceblue"
 		width="300" height="250"></canvas>
 <script>
 	let canvas = document.getElementById("myCanvas");
+	let canvas1 = document.getElementById("myCanvas1");
 	let context = canvas.getContext("2d");
+	let context1 = canvas1.getContext("2d");
 	
 	let img = new Image(); //이미지 객체를 만들어 이 객체에 이미지를 그림
-	img.onload = function () {
+	//이미지 객체는 HTML의 img태그에 해당
+	img.onload = function () { //이미지 로딩완료 되어야 이벤트가 발생
 		context.drawImage(img, 20, 20, 100, 200);
+		context1.drawImage(img,0,0,canvas1.width,canvas.height);
 	}
 	img.src = "media/elsa.png";
 </script>	 
