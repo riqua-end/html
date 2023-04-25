@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>04fade</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<p>페이드 효과</p>
+<button id="btn1">FadeIn</button>
+<button id="btn2">FadeOut</button>
+<button id="btn3">FadeToggle</button>
+<button id="btn4">FadeTo</button>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("#div1").fadeIn(); //speed는 기본 "fast"
+		$("#div2").fadeIn("slow");
+		$("#div3").fadeIn(3000);
+	});
+	$("#btn2").click(function(){
+		$("#div1").fadeOut(); //speed는 기본 "fast"
+		$("#div2").fadeOut("slow");
+		$("#div3").fadeOut(3000);
+	});
+	$("#btn3").click(function(){
+		$("#div1").fadeToggle(); //speed는 기본 "fast"
+		$("#div2").fadeToggle("slow");
+		$("#div3").fadeToggle(3000);
+	});
+	$("#btn4").click(function(){
+		$("#div1").fadeTo("slow",0); //speed와 불투명도는 필수 파라메터,불투명도는 0 ~ 1사이의 값
+		$("#div2").fadeTo("slow",0.5);
+		$("#div3").fadeTo("slow",1.0);
+	});
+	
+});
+</script>
+
+</body>
+</html>

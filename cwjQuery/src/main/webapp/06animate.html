@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>06animate</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<button id="btn1">Start Animation</button>
+<button id="btn2">Start Multi Animation</button>
+<button id="btn3">Animation Queue(순서대로 실행)</button>
+<p>
+<!-- 위치 이동을 위해서는 position을 주어야 함 -->
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("div").animate({
+			//animate()메서드는 현재의 상태에서 변함
+			left: '250px' //속성값은 문자열로 처리
+		});
+	});
+	
+	$("#btn2").click(function(){
+		$("div").animate({
+			left: '250px', //속성값은 문자열로 처리
+			opacity: '0.5',
+			height: '+=150px', //현재의 크기에 150px추가
+			//height: 'toggle',
+			width: '150px'
+		});
+	});
+	
+	$("#btn3").click(function(){
+		var div = $("div");
+		//동일한 div에 여러개의 animate()를 실행하면 순서대로 진행
+		div.animate({
+			height: '300px',
+			opacity: '0.4'
+		},"slow");
+		div.animate({
+			width : '300px',
+			opacity : '0.3'
+		},"slow");
+		div.animate({
+			height : '100px',
+			opacity : '0.4'
+		},"slow");
+		div.animate({
+			width : '100px',
+			opacity : '0.8'
+		},"slow");
+	});
+});
+</script>
+</body>
+</html>

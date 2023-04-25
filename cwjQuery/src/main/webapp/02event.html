@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>02event</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="js/ext.js"></script>
+</head>
+<body>
+
+<p>If you click on me, i will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<h3 id="id1">이곳에 마우스를 진입하세요</h3>
+<h3 id="id2">이곳에서 마우스를 누르거나 놓으세요</h3>
+<hr>
+<p id="hover">이곳에서 마우스 hover 하세요</p>
+<hr>
+<hr>
+Name:
+<input type="text" name="fullname">
+<br>Email:
+<input type="text" name="email">
+
+<hr>
+
+<h4>on메서드 테스트를 위해 사용</h4>
+<h5>on메서드 테스트(다중 입력)를 위해 사용</h5>
+
+<button id="btn" type="button">외부 함수 호출</button>
+
+<script>
+$(document).ready(function(){
+	/*
+	$("p").click(function(){
+		$(this).hide();
+	});
+	*/
+	$("p").dblclick(function(){
+		$(this).hide();
+	});
+	
+	$("#id1").mouseenter(function(){
+		alert("마우스 진입했네요");
+	});
+	
+	$("#id1").mouseleave(function(){
+		alert("마우스 나갔네요");
+	});
+	
+	$("#id2").mousedown(function(){
+		alert("마우스 눌렀네요");
+	});
+	$("#id2").mouseup(function(){
+		alert("마우스 놓았네요");
+	});
+	
+	//두개의 일을 처리할시는 실행 순서대로 함수를 2개 만들어줌
+	$("#hover").hover(function(){
+		alert("You entered p#hover!");
+	},
+	function(){
+		alert("You leave p1!");
+	}
+	);
+	
+	$("input").focus(function(){
+		$(this).css("background-color","yellow"); //jQuery의 css속성 변경
+	});
+	$("input").blur(function(){
+		$(this).css("background-color","green");
+	});
+	
+	$("h4").on("click",function() { //1개 이벤트 처리시는 on(이벤트이름,함수)
+		$(this).hide();
+	});
+	
+	$("h5").on({ //여러이벤트 처리시는 JS객체 형태로 사용{이벤트속성 : 익명함수,이벤트속성:익명함수}
+		mouseenter : function(){
+			$(this).css("background-color","lightgray");
+		},
+		mouseleave : function(){
+			$(this).css("background-color","lightblue");
+		},
+		click : function(){
+			$(this).css("background-color","yellow");
+		}
+	});
+	
+	$("#btn").click(function(){
+		ext01("호출합니다.");	
+	});
+});
+</script>
+</body>
+</html>

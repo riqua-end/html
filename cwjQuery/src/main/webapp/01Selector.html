@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>01Selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+<p id="test">This is another paragraph</p>
+
+<h2 class="test">This is a heading</h2>
+<p class="test">This is a paragraph</p>
+
+<button id="id1">Click me to hide paragraph</button>
+<button id="id2">Click me to hide paragraph</button>
+<button id="id3">Click me to hide paragraph</button>
+
+<script>
+$(document).ready(function(){
+	//hide()는 공간까지 제거
+	$("#id1").click(function(){
+		$("p").hide();
+	});
+	$("#id2").click(function(){
+		$("p#test").hide();
+	});
+	$("#id3").click(function(){
+		$(".test").hide();
+	});
+});
+</script>
+</body>
+</html>
