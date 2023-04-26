@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>08callback</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<button id="btn1">Hide with callback</button>
+<button id="btn2">Hide without callback</button>
+
+<p>This is a paragraph with little content.</p>
+
+<script>
+
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("p").hide("slow", function() { //callback함수는 익명의 함수로 정의
+				alert("The paragraph is now hidden");
+			});
+		});
+		$("#btn2").click(function() { //callback 없음
+			$("p").hide("slow");
+			alert("The paragraph is now hidden");
+		});
+	});
+</script>
+</body>
+</html>

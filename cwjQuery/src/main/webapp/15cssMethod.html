@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>15cssMethod</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button id="btn1">Return background-color of p</button>
+<button id="btn2">Set multiple styles for p</button>
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		//여러개 값이 있을시는 첫번째 값
+		alert("Background color = " + $("p").css("background-color"));
+		let pArr = $("p");
+		$.each(pArr,function(index,item){
+			console.log(item.style.backgroundColor);
+			if(index==1){
+				alert(item.style.backgroundColor);
+			}
+		});
+	});
+	
+	$("#btn2").click(function(){
+		$("p").css({ //JSON객체형으로 파라메터사용 --복수개의 css속성 설정
+			"background-color" : "yellow",
+			"font-size" : "200%"
+		});
+	});
+});
+
+</script>
+</body>
+</html>

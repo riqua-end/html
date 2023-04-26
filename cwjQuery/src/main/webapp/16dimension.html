@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>크기 </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+#div1 {
+	height : 100px;
+	width: 300px;
+	padding: 10px;
+	margin: 3px;
+	border: 1px solid blue;
+	background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button id="btn1">Display dimensions of div</button>
+<button id="btn2">Resize div</button>
+
+<p>width() - returns the width of an element.
+<p>height() - returns the height of an element.
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		let txt = "";
+		txt += "Width of div: " + $("#div1").width() + "<br>";
+		txt += "Height of div : " + $("#div1").height();
+		$("#div1").html(txt);		
+	});
+	$("#btn2").click(function(){
+		$("#div1").width(500).height(500);
+	});
+});
+</script>
+</body>
+</html>
