@@ -4,8 +4,38 @@
 <meta charset="UTF-8">
 <title>18descendentTraverse</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+.descendants {
+	display:block;
+	border:2px solid lightgrey;
+	color : lightgrey;
+	padding : 5px;
+	margin : 15px;
+}
+</style>
 </head>
 <body>
 
+<div class="descendants" style="width:500px;">
+	div (current element)
+	<p class="first">
+	 	p(child) <span> span (grandchild)</span>
+	 </p>
+	<p class="second">
+	 	p(child) <span> span (grandchild)</span>
+	 </p>
+</div>
+
+<script>
+	$(document).ready(function(){
+		/*$("div").children().css({ //한단계 밑의 자식에게 적용
+			"color" : "red",
+			"border" : "2px solid red"
+		}); */
+		//$("div").children("p.first").css({"color":"red","border":"2px solid red"});
+		$("div").find("*").css({"color":"red","border":"2px solid red"}); //모든 후손( 꼭 * 필요)
+	});
+</script>	
 </body>
 </html>
