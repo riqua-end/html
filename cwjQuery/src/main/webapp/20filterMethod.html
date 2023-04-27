@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>20filterMethod</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>This is a paragraph.</p>
+
+<div style="border: 1px solid black;">
+	<p>A paragraph in a div</p>
+	<p>Another paragraph in a div</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+	<p>A paragraph in another div</p>
+	<p>Another paragraph in another div</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+	<p>A paragraph in another div</p>
+	<p>Another paragraph in another div</p>
+</div>
+
+<p>My name is Donald.</p>
+<p class="intro">I live in DuckBurg.</p>
+<p class="intro">I love DuckBurg.</p>
+<p>My best friend is Mickey.</p>
+
+<script>
+$(document).ready(function(){
+	//$("div").first().css("background-color","yellow");
+	//$("div").last().css("background-color","yellow");
+	$("div").eq(1).css("background-color","yellow"); //색인번호 eq()
+	$("p").filter(".intro").css("background-color","yellow"); //.intro를 포함한것
+	$("p").not(".intro").css("background-color","aliceblue"); //.intro 빼고 나머지
+});
+</script>
+</body>
+</html>
