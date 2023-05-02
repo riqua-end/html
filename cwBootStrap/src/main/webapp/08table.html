@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>08table</title>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/> 
+<!--BS 4 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!--icon -->
+<!--fontawesome icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!--google icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../css/myCss.css?after"> <!-- 수정시 바로 적용을 위해 after추가 -->
+</head>
+<body>
+
+<div class="container">
+	<h2>hover Rows</h2>
+	<p>안녕하세요</p>
+	<table class="table table-hover table-bordered table-striped">
+	<!-- 기본테이블은 수평 테두리선,hover는 마우스 hover시 색상이 진해짐,bordered는 수직 테두리선,striped는 홀수줄 줄무늬 -->
+		<thead>
+			<tr>
+				<th>First name</th>
+				<th>last name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John</td>
+				<td>Doe</td>
+				<td>jogn@example.com</td>
+			</tr>
+			<tr>
+				<td>mary</td>
+				<td>moe</td>
+				<td>mary@example.com</td>
+			</tr>
+			<tr>
+				<td>july</td>
+				<td>dooley</td>
+				<td>july@example.com</td>
+			</tr>		
+		</tbody>		
+	</table>
+</div>
+
+<div class="table-responsive">
+	<h2>Responsive Table</h2>
+	<p>안녕하세요
+	<!-- 테이블의 칸이 너무 많아 가로 스크롤이 있어야만 할시에 적용( 이것이 없으면 화면 전체 스크롤을 사용) -->
+	<!-- RWD적용을 위해 필요 -->
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>First name</th>
+				<th>last name</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John</td>
+				<td>Doe</td>
+				<td>jogn@example.com</td>
+				<td>jogn@example.com</td>
+				<td>jogn@example.com</td>
+				<td>jogn@example.com</td>
+				<td>jogn@example.com</td>
+				<td>jogn@example.com</td>
+			</tr>
+			<tr>
+				<td>mary</td>
+				<td>moe</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+				<td>mary@example.com</td>
+			</tr>
+			<tr>
+				<td>july</td>
+				<td>dooley</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+				<td>july@example.com</td>
+			</tr>		
+		</tbody>		
+	</table>
+</div>
+</body>
+</html>
