@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>16spinner</title>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/> 
+<!--BS 4 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!--icon -->
+<!--fontawesome icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!--google icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../css/myCss.css?after"> <!-- 수정시 바로 적용을 위해 after추가 -->
+</head>
+<body>
+
+
+<div class="container">
+	<h2>Colored Spinners</h2>
+	<p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+	<!-- spinner-border는 인라인 레벨,테두리가 있는 원 -->
+	<div class="spinner-border text-muted"></div>
+	<div class="spinner-border text-primary"></div>
+	<div class="spinner-border text-success"></div>
+	<div class="spinner-border text-info"></div>
+</div>
+
+<p></p>
+<div class="container">
+	<h2>Colored Spinners</h2>
+	<p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+	<!-- spinner-grow는 인라인 레벨,색으로 채워진 원이 커지는 형태 -->
+	<div class="spinner-grow text-muted"></div>
+	<div class="spinner-grow text-primary"></div>
+	<div class="spinner-grow text-success"></div>
+	<div class="spinner-grow text-info"></div>
+</div>
+
+<p></p>
+<div class="container">
+	<h2>Spinner Buttons</h2>
+	<p>Add spinners to buttons</p>
+	<!-- spinner-border-sm은 적은 원 -->
+	<!-- button안에 넣을시는 span태그에 클래스 속성 사용 -->
+	<button class="btn btn-primary">
+		<span class="spinner-border spinner-border-sm"></span>
+	</button>
+	
+	<button class="btn btn-primary">
+		<span class="spinner-border spinner-border-sm"></span>
+		Loading..
+	</button>
+	
+	<button class="btn btn-primary" disabled>
+		<span class="spinner-border spinner-border-sm"></span>
+		Loading..
+	</button>
+	
+	<button class="btn btn-primary" disabled>
+		<span class="spinner-grow spinner-grow-sm"></span>
+		Loading..
+	</button>
+</div>
+</body>
+</html>
