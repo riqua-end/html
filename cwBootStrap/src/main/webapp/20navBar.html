@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>20navBar</title>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/> 
+<!--BS 4 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!--icon -->
+<!--fontawesome icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!--google icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../css/myCss.css?after"> <!-- 수정시 바로 적용을 위해 after추가 -->
+</head>
+<body>
+
+<!-- 콘테이너는 nav태그 기본클래스 navbar 수평배치 navbar-expand-sm 메뉴색은 배경색 bg-dark
+글자색은 navbar-dark(흰색),navbar-light는 검정색,fixed-top은 스크롤시에도 메뉴 위치는 스크롤 안되고 계속 보임 -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark container fixed-top">
+	<!-- Brand/logo -->
+	<!-- 메뉴 수행 ul안에 안넣고 바로 navbar안에 a태그로 넣어줌,로고 이미지 사용도 가능 -->
+	<a class="navbar-brand" href="#">
+		<img src="https://www.w3schools.com/bootstrap4/bird.jpg" alt="logo" style="width:40px;">
+	</a>
+	
+	<!-- links -->
+	<!-- 일반 메뉴는 ul안에 만듦 ul은 navbar-nav 클래스,메뉴 항목 li로 nav-item, 링크는 a로 nav-link-->
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="#">Link 1</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Link 2</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Link 3</a>
+		</li>
+	</ul>
+</nav>
+
+<p></p>
+<br>
+<br>
+
+<nav class="navbar bg-light container">
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="#">Link 1</a>
+			<a class="nav-link" href="#">Link 2</a>
+			<a class="nav-link" href="#">Link 3</a>
+		</li>	
+	</ul>
+</nav>
+
+<br><br><br><br>
+<!-- 상병 계급장 처럼 생긴 메뉴 감추기 적용 -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark container">
+	<!-- 브랜드나 로고 -->
+	<a class="navbar-brand" href="#">Navbar</a>
+	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span> <!-- icon이 상병 계급장,아이콘은 글자로 표시 -->
+	</button>
+	<!-- 컬랩스의 타겟으로 사용할 콘테이너를 만들고 그 안에 ul을 적용 -->
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-item" href="#">Link</a>
+			</li>
+			<li class="nav-item">	
+				<a class="nav-item" href="#">Link</a>
+			</li>
+			<li class="nav-item">	
+				<a class="nav-item" href="#">Link</a>
+			</li>	
+		</ul>
+	</div>
+</nav>
+</body>
+</html>
